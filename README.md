@@ -1,9 +1,20 @@
-# 3D Mosfet
+# Mosfet 3D
 
-main project goal is to convert
+The NSF awarded ubuffalo.edu Java applets service for a set of
+Educational Java Applets with semiconductors in mind known as
+"The semiconductor Applet Service" (1996-2021) was closed recently.
+The 2D MOS applet was my professor's favorite tool during the years
+in his "Analog Integrated Circuits", "VLSI", and "Electronics I"
+courses.
 
-![](https://user-images.githubusercontent.com/6152197/122866947-0af20b80-d33e-11eb-809b-7f8091b55bbd.png)
 
-to this
+The ubuffalo's 2D version is now fully refurbished and
+migrated from old days AWT and Java 1.1 to J2EE
+and elevated from 2D to 3D by me.
 
-![](https://user-images.githubusercontent.com/6152197/122867004-1fce9f00-d33e-11eb-823c-3e1caa87ac93.png)
+
+I think this will help to teach MOS operation for a
+broad range of courses by respected instructors/profs.
+
+
+You can contact me at <a href="mailto:mahdiyar.zerehpoush@gmail.com">mahdiyar.zerehpoush@gmail.com</a>
