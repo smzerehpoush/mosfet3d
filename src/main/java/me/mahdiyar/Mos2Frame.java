@@ -48,6 +48,7 @@ public class Mos2Frame extends Frame implements Printable, ActionListener {
             mos3DPanel.setVisible(!mos3DPanel.isVisible());
             mos2DPanel.setVisible(!mos2DPanel.isVisible());
         });
+        this.setMenuBar(new MosMenuBar(this));
     }
 
     public static void main(String[] args) {
