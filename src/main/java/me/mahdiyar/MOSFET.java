@@ -182,8 +182,6 @@ public class MOSFET {
     private void drawOxide(Graphics g) {
         Color color = Color.GRAY;
         Color tmp = g.getColor();
-        g.setColor(Color.BLACK);
-        g.drawOval(x,y,50,50);
         g.setColor(color);
         g.fillRect(x, y, width, hOxide);
         drawRightSide(g, x,y,width,hOxide,shift,color);

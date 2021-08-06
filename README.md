@@ -1,5 +1,8 @@
 # Mosfet 3D
 
+[![Java CI with Maven](https://github.com/smzerehpoush/mosfet3d/actions/workflows/maven.yml/badge.svg)](https://github.com/smzerehpoush/mosfet3d/actions/workflows/maven.yml)
+
+
 The NSF awarded ubuffalo.edu Java applets service for a set of
 Educational Java Applets with semiconductors in mind known as
 "The semiconductor Applet Service" (1996-2021) was closed recently.

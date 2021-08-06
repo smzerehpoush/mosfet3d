@@ -146,30 +146,41 @@ public abstract class MosDevCircuit extends Canvas {
         if (d > vT) {
             yLin[1] = yLin[0] + (int) (yToV * (vgs - vT));
             yLin[2] = yLin[0] + (int) (yToV * (d - vT));
-            fet.setChannelX(xLin[0]);
-            fet.setChannelY(yLin[0]);
-            fet.setChannelWidth(xLin[3] - xLin[0]);
+            fet.setChannelX(findMinValue(xLin));
+            fet.setChannelY(findMinValue(yLin));
+            fet.setChannelWidth(findMaxValue(xLin)-findMinValue(xLin));
             g.fillPolygon(xLin, yLin, 4);
         } else {
 
             ySat[1] = ySat[0] + (int) (yToV * (vgs - vT));
             xSat[2] = xChannelMaxSat + (int) (xToV * d);
-            fet.setChannelWidth(xLin[3] - xLin[0]);
-            fet.setChannelX(xSat[0]);
-            fet.setChannelY(ySat[0]);
-            fet.setChannelWidth(xSat[2] - xSat[0]);
+            fet.setChannelX(findMinValue(xSat));
+            fet.setChannelY(findMinValue(ySat));
+            fet.setChannelWidth(findMaxValue(xSat)-findMinValue(xSat));
             g.fillPolygon(xSat, ySat, 3);
         }
 
     }
 
-    private void drawTop(Graphics g, int x, int y, int width, int d, Color color) {
-        Color tmp = g.getColor();
-        g.setColor(color);
-        int[] xPoints = new int[]{x, x + d, x + width + d, x + width};
-        int[] yPoints = new int[]{y, y - d, y - d, y};
-        g.fillPolygon(xPoints, yPoints, 4);
-        g.setColor(tmp);
+    private int findMinValue(int[] array) {
+        if (array == null || array.length == 0)
+            throw new IllegalArgumentException();
+        int min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min)
+                min = array[i];
+        }
+        return min;
+    }
+    private int findMaxValue(int[] array) {
+        if (array == null || array.length == 0)
+            throw new IllegalArgumentException();
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max)
+                max = array[i];
+        }
+        return max;
     }
 
     private void drawDescription(Graphics g) {
