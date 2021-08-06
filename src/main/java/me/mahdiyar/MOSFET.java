@@ -175,7 +175,7 @@ public class MOSFET {
         g.fillRect(xD - i, ySemiTop, wSource, hChannel);
 
         if (drawChannel)
-            drawTop(g, channelX, channelY, channelWidth, shift, Color.BLUE);
+            drawTop(g, channelX, channelY, channelWidth, shift, color);
         drawTop(g, -i + xD, ySemiTop, wSource, shift, color);
     }
 
